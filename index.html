@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nero Food | Marrakech</title>
+<style>
+:root {
+  --red: #ff3939;
+  --bg: #101012;
+  --card: #1c1c21;
+  --white: #fff;
+  --muted: #b9b9c0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+}
+a { text-decoration: none; color: inherit; }
+.container { width: 92%; max-width: 1100px; margin: auto; }
+header {
+  background: #151518;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.logo { font-size: 25px; font-weight: 900; }
+.logo span { color: var(--red); }
+nav a:hover { color: var(--red); }
+.btn {
+  display: inline-block;
+  padding: 13px 19px;
+  background: var(--red);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+}
+.hero {
+  padding: 70px 0;
+  background: radial-gradient(circle at 80% 30%, #4c1919, #101012 60%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.tag {
+  color: #ff8989;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1; margin: 20px 0; }
+h1 span, h2 span { color: var(--red); }
+p { color: var(--muted); line-height: 1.7; }
+.hero-art {
+  min-height: 320px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #572020, #211417);
+  display: grid;
+  place-items: center;
+  font-size: 120px;
+  border: 1px solid #563030;
+}
+section { padding: 55px 0; }
+.heading { text-align: center; margin-bottom: 30px; }
+.heading h2 { font-size: 38px; margin-bottom: 8px; }
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.item {
+  background: var(--card);
+  border: 1px solid #303036;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .2s;
+}
+.item:hover { transform: translateY(-5px); border-color: var(--red); }
+.food {
+  min-height: 130px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #492020, #241719);
+  font-size: 60px;
+}
+.item-info { padding: 15px; }
+.item h3 { min-height: 40px; font-size: 18px; }
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.price { font-size: 23px; font-weight: 900; color: #ff7373; }
+.order {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px;
+  background: var(--red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.order:hover, .btn:hover { background: #dc2525; }
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.feature {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #303036;
+}
+.feature b { display: block; margin: 8px 0; }
+.contact-box {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #303036;
+}
+.contact-box a { display: inline-block; margin: 8px 10px 8px 0; }
+footer {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding: 25px 0;
+  color: var(--muted);
+}
+@media(max-width: 850px) {
+  .menu { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-art { min-height: 250px; }
+}
+@media(max-width: 480px) {
+  nav { min-height: 65px; }
+  .logo { font-size: 21px; }
+  nav .btn { padding: 10px; font-size: 13px; }
+  .menu { gap: 10px; }
+  .food { min-height: 100px; font-size: 48px; }
+  .item-info { padding: 11px; }
+  .item h3 { font-size: 16px; }
+  .features { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">NERO <span>FOOD</span> 🍔</a>
+      <a href="#menu" class="btn">Voir le menu</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="tag">🔥 FAST FOOD · MARRAKECH</div>
+      <h1>LE GOÛT QUI<br>FAIT <span>PLAISIR.</span></h1>
+      <p>
+        Bienvenue chez Nero Food ! Découvrez nos tacos,
+        nos recettes crispy et nos sandwichs.
+        Choisissez votre repas et commandez facilement.
+      </p>
+      <a href="#menu" class="btn">Découvrir le menu →</a>
+    </div>
+    <div class="hero-art">🌮🍟</div>
+  </div>
+</section>
+
+<section>
+  <div class="container features">
+    <div class="feature">
+      <div>🌮</div>
+      <b>Un menu gourmand</b>
+      <p>Découvrez nos recettes et nos prix.</p>
+    </div>
+    <div class="feature">
+      <div>📲</div>
+      <b>Commande facile</b>
+      <p>Contact direct via WhatsApp.</p>
+    </div>
+    <div class="feature">
+      <div>📍</div>
+      <b>À Marrakech</b>
+      <p>Sidi Youssef Ben Ali.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="heading">
+      <h2>NOTRE <span>MENU</span> 🍔</h2>
+      <p>Choisissez votre envie du moment.</p>
+    </div>
+
+    <div class="menu" id="menuGrid">
+
+      <article class="item">
+        <div class="food">🌯</div>
+        <div class="item-info">
+          <h3>Tacos Mix XL</h3>
+          <div class="bottom">
+            <div class="price">17 DH</div>
+            <button class="order" onclick="commander('Tacos Mix XL',17)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🌯🔥</div>
+        <div class="item-info">
+          <h3>Tacos Mix XXL</h3>
+          <div class="bottom">
+            <div class="price">25 DH</div>
+            <button class="order" onclick="commander('Tacos Mix XXL',25)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🌮</div>
+        <div class="item-info">
+          <h3>Tacos Crispi XL</h3>
+          <div class="bottom">
+            <div class="price">20 DH</div>
+            <button class="order" onclick="commander('Tacos Crispi XL',20)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🌮🔥</div>
+        <div class="item-info">
+          <h3>Tacos Crispi XXL</h3>
+          <div class="bottom">
+            <div class="price">30 DH</div>
+            <button class="order" onclick="commander('Tacos Crispi XXL',30)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🥪</div>
+        <div class="item-info">
+          <h3>Khbza Mix</h3>
+          <div class="bottom">
+            <div class="price">12 DH</div>
+            <button class="order" onclick="commander('Khbza Mix',12)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🥪🔥</div>
+        <div class="item-info">
+          <h3>Khbza Crispi</h3>
+          <div class="bottom">
+            <div class="price">13 DH</div>
+            <button class="order" onclick="commander('Khbza Crispi',13)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🍗</div>
+        <div class="item-info">
+          <h3>Bwata Crispi</h3>
+          <div class="bottom">
+            <div class="price">20 DH</div>
+            <button class="order" onclick="commander('Bwata Crispi',20)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="food">🍟🍗</div>
+        <div class="item-info">
+          <h3>Pocs Crispi</h3>
+          <div class="bottom">
+            <div class="price">30 DH</div>
+            <button class="order" onclick="commander('Pocs Crispi',30)">Commander</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="heading">
+      <h2>CONTACT <span>NOUS</span></h2>
+      <p>Retrouvez Nero Food à Marrakech.</p>
+    </div>
+    <div class="contact-box">
+      <h3>📍 Notre adresse</h3>
+      <p>Sidi Youssef Ben Ali, Derb Lgabs, près de l'avenue Al Massira.</p>
+      <h3>📞 Téléphone</h3>
+      <a class="btn" href="tel:+212716497151">Ayoub · 0716497151</a>
+      <a class="btn" href="tel:+212623692943">Youssef · 0623692943</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <b>NERO <span style="color:#ff3939">FOOD</span></b>
+    <p>© <span id="year"></span> Nero Food Marrakech · Demo par Team NEXORA</p>
+    <small>Build. Grow. Stand Out.</small>
+  </div>
+</footer>
+
+<script>
+// بدّل XXXXXXXXXX برقم WhatsApp الرسمي بصيغة دولية.
+// مثال: 2126XXXXXXXX أو 2127XXXXXXXX
+const WHATSAPP_NUMBER = "212XXXXXXXXX";
+
+function commander(nom, prix) {
+  if (WHATSAPP_NUMBER.includes("X")) {
+    alert("خاصك تزيد رقم WhatsApp الرسمي فالكود باش يتفعّل الطلب.");
+    return;
+  }
+  const message = `Salam Nero Food! Bghit nطلب: ${nom} - ${prix} DH.`;
+  const url = "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
